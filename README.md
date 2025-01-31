@@ -10,4 +10,4 @@
 - Use of Tailwind css
 - Understood react routing
 - Used React-Router-DOM
--  
+

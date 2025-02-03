@@ -2,7 +2,7 @@ const app = require("./app")
 const ConnectDB = require('./db/db')
 
 process.on('uncaughtException',(err)=>{
-    console.log(`Varta mame durr...${err.message}`)
+    console.log(`Error:${err.message}`)
     process.exit(0);    
 })
 

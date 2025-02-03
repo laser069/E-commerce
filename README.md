@@ -11,3 +11,8 @@
 - Understood react routing
 - Used React-Router-DOM
 
+## Milestone-3
+- Implemented Express on the backend
+- Used MongoDBAtlas to create a cluster
+- Used mongoose to connect MongoDb with the backend
+- Made some error-handling changes

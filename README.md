@@ -22,3 +22,6 @@
 - Used JsonWebToken and bcrypt to encrypt password
 - Created multer file
 
+## Milestone-5
+- Created Signup page
+- Used TailwindCSS to make it responsive

@@ -9,9 +9,20 @@ function Signup() {
   const[mail,setEmail]= useState('')
   const [password,setPassword] = useState('')
   const [visible,setVisible]=useState(false)
+  const [avatar,setAvatar] = useState('')
+  const handleInput=(e)=>{
+    const fileName = e.target.file[0]
+    setAvatar(fileName)
+  }
   const handleSubmit=(e)=>{
 e.preventdefaultSubmit()
-  }
+const form = new FormData()
+form.append('file',avatar)
+form.append("name",name)
+form.append("email",email)
+form.append("password",password)
+
+}
   return (
     <div className='flex box-border h-screen justify-center items-center bg-gray-100'>
       <div className='flex flex-col w-109 h-109   rounded-xl shadow-xl shawdow-black-600 bg-sky-100'>
@@ -34,7 +45,7 @@ e.preventdefaultSubmit()
             </div>
                <div className='flex flex-col w-full h-15 mt-5 rounded-lg shadow-lg justify-center items-center  bg-slate-200'>
                <label>set your profile pic</label>
-                <input type='file' className='bg-amber-200'/>
+                <input type='file'  name="avatar"className='bg-amber-200' onChange={handleInput}/>
                </div>
              <button className='mt-5 w-full bg-blue-300 p-2 rounded-lg shadow-lg' type='submit'>submit</button>
              <div className='mt-1 flex '>

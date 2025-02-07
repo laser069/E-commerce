@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema({
         address2:{type:String,required:true},
         pinCode:{type:Number,required:true},
     },
-    role:{type:String,default:user},
+    role:{type:String,default:"user"},
     createdAt:{type:Date,default:Date.now()},
 
 

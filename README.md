@@ -25,3 +25,8 @@
 ## Milestone-5
 - Created Signup page
 - Used TailwindCSS to make it responsive
+
+## Milestone-6
+- Use bcrypt to hash the user's password during signup.
+- Save the hashed password in the database instead of plain text.
+- Saved all the user's data in the database while ensuring that the password remains encrypted.

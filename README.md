@@ -30,3 +30,10 @@
 - Use bcrypt to hash the user's password during signup.
 - Save the hashed password in the database instead of plain text.
 - Saved all the user's data in the database while ensuring that the password remains encrypted.
+
+## Milestone-7
+- Accept user credentials (email/username and password).
+- Retrieve the corresponding user from the database.
+- ## Validate Password:
+- Use bcrypt to hash the entered password.
+- Compare it with the stored hashed password for authentication.

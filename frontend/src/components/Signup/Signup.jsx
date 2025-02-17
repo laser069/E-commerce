@@ -19,8 +19,9 @@ e.preventdefaultSubmit()
 const form = new FormData()
 form.append('file',avatar)
 form.append("name",name)
-form.append("email",email)
+form.append("email",mail)
 form.append("password",password)
+axios.post(`${path}/create/${form}`).then()
 
 }
   return (
@@ -36,7 +37,7 @@ form.append("password",password)
               <FaUser className='mr-5 h-8 w-8'/>
             </div>
             <div className='flex w-full h-8 mt-5 rounded-lg shadow-lg justify-center items-center  bg-slate-200'>
-              <input placeholder='email' type='text' required value={mail} onChange={(e)=>setName(e.target.value)}className='w-full focus:outline-none ml-5 text-xl'/>
+              <input placeholder='email' type='text' required value={mail} onChange={(e)=>setEmail(e.target.value)}className='w-full focus:outline-none ml-5 text-xl'/>
               <MdEmail className='mr-5 h-8 w-8'/>
             </div>
             <div  className='flex w-full h-8 mt-5 rounded-lg shadow-lg justify-center items-center  bg-slate-200'>

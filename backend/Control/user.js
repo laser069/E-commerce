@@ -6,7 +6,7 @@ const ErrorHandler = require('../util/Error')
 
 const router = express.Router();
 
-router.post('/create',async(req,res,next)=>{
+router.post('/create',upload.single("file"),async(req,res,next)=>{
     try{
     const {name,email,password} = req.body;
     const existUser = user.findOne(email);
@@ -22,6 +22,26 @@ router.post('/create',async(req,res,next)=>{
 }
 catch(e){
     console.log(e.message);
+}
+})
+
+router.post('/login',async(req,res)=>{
+try
+    {    const {email,password} = req.body
+    if(!email||!password){
+        return next(new ErrorHandler("all fields are required",400))
+    }
+    const user = await user.findOne({email}).select('password')
+    if(!user)
+        return next(new ErrorHandler("user is not there",400))
+    const passwordValid = user.ComparePassword(password)
+    if(!passwordValid){
+        return next(new ErrorHandler("Password is incorrect ",400))
+
+    }}
+
+catch(e){
+    return next(new ErrorHandler(error.message,500))
 }
 })
 

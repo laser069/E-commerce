@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import './App.css'
 import { Routes,Route } from 'react-router-dom'
-import {LoginPage, Signup}  from './routes/Routes'
+import {LoginPage, Signup,Home}  from './routes/Routes'
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
      <Routes>
       <Route path="login" element={<LoginPage />}/>
       <Route path="Signup" element={<Signup />}/>
-
+    <Route path='/' element={<Home/>}/>
      </Routes>
     </>
   )

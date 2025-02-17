@@ -40,3 +40,6 @@ userSchema.methods.jsonTokens= function(){
     return jwt.sign({id:this._id},process.env.JWT_TOKEN,{expiresIn:'7d'})
 }
 
+userSchema.methods.ComparePassword = async ()=> {
+    
+}

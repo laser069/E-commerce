@@ -37,3 +37,8 @@
 - ## Validate Password:
 - Use bcrypt to hash the entered password.
 - Compare it with the stored hashed password for authentication.
+
+
+## Milestone-9
+- Create the form for products
+- This form will take multiple product images images as input

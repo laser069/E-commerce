@@ -43,3 +43,6 @@ userSchema.methods.jsonTokens= function(){
 userSchema.methods.ComparePassword = async ()=> {
     
 }
+
+
+module.exports = mongoose.model("User",userSchema)

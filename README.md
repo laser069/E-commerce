@@ -42,3 +42,12 @@
 ## Milestone-9
 - Create the form for products
 - This form will take multiple product images images as input
+
+
+
+
+
+
+## Milestone-13
+- Learned how to write an endpoint that will update the existing data in MongoDB.
+- Learned how to auto fill the form with previous data and give option to edit.

@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom';
 import axios from 'axios'
 import server from '../server';
 const ProductDetail = () => {
+  const [quant,setQuant] = useState('')
     const[product,setProduct]=  useState([])
     const [error,setError]=useState('')
     const {id}=useParams()
@@ -34,6 +35,14 @@ fetchproduct()
       <img src={`http://localhost:5000/products/${img}`} alt={product.name} className="w-64 h-64 object-cover" />
       <p className="mt-2">{product.description}</p>
       <p className="mt-2 font-semibold">Price: ${product.price}</p>
+      <button>Add to Wishlist</button>
+      <div className=''>
+      <button onClick={()=>setQuant(prev=>prev!=0?prev-1:0)}>-</button>
+      Add to Cart
+      <button onClick={()=>setQuant(prev=>prev+1)}>+</button>
+      
+      </div>
+
     </div>
   )
 }

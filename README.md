@@ -51,3 +51,10 @@
 ## Milestone-13
 - Learned how to write an endpoint that will update the existing data in MongoDB.
 - Learned how to auto fill the form with previous data and give option to edit.
+
+## Milestone-15
+- Create an new Nav component with links to
+- Home
+- My-products
+- Add product
+- cart

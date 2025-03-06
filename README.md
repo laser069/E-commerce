@@ -56,3 +56,7 @@
 - My-products
 - Add product
 - cart
+
+## Milestone-16
+- Learn to create new page to display each product.
+- Learn to add quantity and add to card button.

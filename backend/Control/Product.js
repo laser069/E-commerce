@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require ('mongoose')
 const Product = require('../model/product')
+const User = require("../model/user")
 const {pupload} = require('../multer')
 const router = express.Router()
 const path = require('path');
@@ -155,3 +156,25 @@ if(!products)
         res.status(500).send(e.message)
     }
  })
+
+ router.get('/cartProduct',async(req,res)=>{
+    const {email} = req.query
+    try{
+        if(!email){
+            res.status(404).send("login to add to cart ")
+        }
+        const user = await User.findOne({email}).populate({path:"cart.productId",model:"Product"})
+        if(!user)
+            res.status(400).send("register to add to cart")
+        res.status(200).json({
+            message:"cart retrived successfully",
+            cart:user.cart
+        })
+
+    }catch(e){
+        console.error("server error",e)
+        res.status(500).json({error:"Server error"})
+    }
+ })
+
+

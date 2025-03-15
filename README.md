@@ -69,3 +69,8 @@
 - Created cart frontend page and display the products
 - For each product added an option to increase and decrease quantity using + and - buttons.
 - Created an Backend endpoint for increase and decrease quantity  
+
+## Milestone-20
+- Created  backend endpoint that will send all the user data using mail.
+- Created an frontend profile page that will display all the user data
+- Displayed profile photo, name, mail and addresses.

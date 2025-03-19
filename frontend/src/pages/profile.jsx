@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-
+import Nav from "../components/Nav";
+import AddressCard from "../components/AdressCard"
 
 
 export default function Profile() {
@@ -37,7 +38,7 @@ export default function Profile() {
 	}, []);
 	return (
 		<>
-
+			<Nav />
 			<div className="w-full min-h-screen bg-neutral-800 p-5">
 				<div className="w-full h-full bg-neutral-700 rounded-lg">
 					<div className="w-full h-max my-2 p-5">
@@ -108,7 +109,9 @@ export default function Profile() {
 									No Addresses Found
 								</div>
 							) : null}
-
+							{addresses.map((address, index) => (
+								<AddressCard key={index} {...address} />
+							))}
 						</div>
 					</div>
 				</div>

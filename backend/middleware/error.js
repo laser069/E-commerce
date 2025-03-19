@@ -7,12 +7,12 @@ module.exports=(err,req,res,next)=>{
 
     if(err.name=="CastError"){//mongodb id error-->mongodb should have 14 digit hexa decimal number if not we will get cast error
         const message="send the correct id"
-        err= new ErrorHandler(message,400)
+
     }
 
     if(err.name=="11000"){
         const message="id already exist"
-        err= new ErrorHandler(message,400)
+
     }
     
     if(err.name=="jsonWebToken"){
@@ -28,5 +28,6 @@ module.exports=(err,req,res,next)=>{
         success:"false",
         message:err.message
     })
+    res.status(400).send(message)
 
 }

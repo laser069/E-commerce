@@ -74,3 +74,8 @@
 - Created  backend endpoint that will send all the user data using mail.
 - Created an frontend profile page that will display all the user data
 - Displayed profile photo, name, mail and addresses.
+
+## Milestone-21
+- Created address form frontend page
+- Created an state that will store input address
+- When we click on add address in profile it should navigate to this form page.

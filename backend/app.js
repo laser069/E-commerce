@@ -1,5 +1,5 @@
 const express = require("express");
-const ErrorHandler = require('./util/Error')
+const ErrorHandler = require('./middleware/error')
 const cors = require('cors')
 const user = require("./Control/user")
 const app = express();
@@ -12,7 +12,12 @@ app.use(express.urlencoded({extended:true}))
 require('dotenv').config({path:'backend/config/.env'})
 
 app.use('/api/v2',user)
-app.use(ErrorHandler)
+app.use((err, req, res, next) => {
+    res.status(err.statusCode || 500).json({
+        success: false,
+        message: err.message || "Internal Server Error",
+    });
+});
 
 module.exports = app;
 

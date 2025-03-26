@@ -79,3 +79,9 @@
 - Created address form frontend page
 - Created an state that will store input address
 - When we click on add address in profile it should navigate to this form page.
+
+## MileStone-22
+- Worked on Profilepage
+
+## Milestone-23
+- created an endpoint to get all address from the user

@@ -36,7 +36,7 @@ const productDetails = [
       name: "Product 6",
       image: "https://media.istockphoto.com/id/1319625327/photo/shopping-basket-full-of-variety-of-grocery-products-food-and-drink-on-yellow-background.jpg?s=612x612&w=0&k=20&c=GHyTjlkoFweJnbAadmn4tzEYvfiB73MTe93KMT3GIM0=",
       description: "Description of product 6",
-      price: 600,
+      price: 600 ,
     },
     {
       name: "Product 7",

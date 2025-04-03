@@ -6,7 +6,7 @@ const Nav = () => {
 
   return (
     <nav className='flex justify-evenly'>
-     <NavLink to={'/'} >
+     <NavLink to={'/ '} >
 
       home
      </NavLink>

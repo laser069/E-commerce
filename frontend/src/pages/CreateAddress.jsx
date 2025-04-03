@@ -63,6 +63,7 @@ const CreateAddress = () => {
                     <div className="mt-4">
                         <label className="pb-1 block">City</label>
                         <input
+                        
                             type="text"
                             value={city}
                             className="w-full p-2 border rounded"

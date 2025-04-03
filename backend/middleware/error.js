@@ -1,17 +1,24 @@
-const ErrorHandler = require('../utils/Error');
+
+const ErrorHandler = require('../utils/Error')
+
 
 module.exports = (err, req, res, next) => {
     err.message = err.message || 'Something went wrong';
     err.statuscode = err.statuscode || 500;
 
-    if (err.name === "CastError") {
-        const message = "Invalid ID format";
-        err = new ErrorHandler(message, 400);
+
+module.exports=(err,req,res,next)=>{
+    err.message=err.message||'something went wrong'
+    err.statuscode=err.statuscode
+
+    if(err.name=="CastError"){//mongodb id error-->mongodb should have 14 digit hexa decimal number if not we will get cast error
+        const message="send the correct id"
+
     }
 
-    if (err.code === 11000) {
-        const message = "Duplicate field value entered";
-        err = new ErrorHandler(message, 400);
+    if(err.name=="11000"){
+        const message="id already exist"
+
     }
 
     if (err.name === "JsonWebTokenError") {
@@ -25,7 +32,11 @@ module.exports = (err, req, res, next) => {
     }
 
     res.status(err.statuscode).json({
-        success: false,
-        message: err.message
-    });
-};
+
+        success:"false",
+        message:err.message
+    })
+    res.status(400).send(message)
+
+}
+

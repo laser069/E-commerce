@@ -16,6 +16,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/products', express.static(path.join(__dirname, 'products')));
 require('dotenv').config({path:'backend/config/.env'})
 
+
 app.use('/api/v2',user)
 app.use('/api/product',product)
 app.use(ErrorHandler)

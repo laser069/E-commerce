@@ -88,9 +88,12 @@ if(!isPasswordValid)
 sendToken(user,201,res)
     }
 
+
+
     
     catch(e){
     return next(new ErrorHandler(e.message,500))}
+
 })
 
 

@@ -1,3 +1,11 @@
+
+import { useState } from 'react'
+
+import './App.css'
+import { Routes,Route } from 'react-router-dom'
+import {LoginPage, Signup,Home}  from './routes/Routes'
+import Profile from './pages/profile'
+
 import { useEffect, useState } from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
@@ -5,6 +13,7 @@ import Nav from './components/Nav';
 import { LoginPage,SignupPage,HomePage,CreateProduct,MyProduct,ProductDetail } from './routes/Routes' 
 import server from './server';
 import axios from 'axios';
+
 
 function App() {
     const [count, setCount] = useState(0);
@@ -15,6 +24,7 @@ axios.get(`${server}/user/getuser`,{withCredentials:true})
 })
 .catch()
 },[])
+
 
     return (
         <>
@@ -30,6 +40,7 @@ axios.get(`${server}/user/getuser`,{withCredentials:true})
  
         </>
     );
+
 }
 
 export default App;

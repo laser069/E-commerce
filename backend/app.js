@@ -11,7 +11,7 @@ app.use(express.urlencoded({extended:true}))
 
 require('dotenv').config({path:'backend/config/.env'})
 
-app.use('/api/',user)
+app.use('/api/', user)
 app.use((err, req, res, next) => {
     res.status(err.statusCode || 500).json({
         success: false,

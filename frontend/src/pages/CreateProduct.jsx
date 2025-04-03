@@ -1,3 +1,4 @@
+
 import React, { useState, useSyncExternalStore } from 'react'
 
 export default function CreateProduct() {
@@ -63,7 +64,6 @@ export default function CreateProduct() {
     </div>
   )
 }
-
 
 
 

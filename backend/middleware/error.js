@@ -1,4 +1,10 @@
+
 const ErrorHandler = require('../utils/Error')
+
+
+module.exports = (err, req, res, next) => {
+    err.message = err.message || 'Something went wrong';
+    err.statuscode = err.statuscode || 500;
 
 
 module.exports=(err,req,res,next)=>{
@@ -14,20 +20,23 @@ module.exports=(err,req,res,next)=>{
         const message="id already exist"
 
     }
-    
-    if(err.name=="jsonWebToken"){
 
+    if (err.name === "JsonWebTokenError") {
+        const message = "Invalid token, please log in again";
+        err = new ErrorHandler(message, 401);
     }
-    
-    if(err.name=="jsonTokenexpired")
-    {
 
+    if (err.name === "TokenExpiredError") {
+        const message = "Token has expired, please log in again";
+        err = new ErrorHandler(message, 401);
     }
 
     res.status(err.statuscode).json({
+
         success:"false",
         message:err.message
     })
     res.status(400).send(message)
 
 }
+

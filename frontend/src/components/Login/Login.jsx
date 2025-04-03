@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {IoMailSharp} from "react-icons/io5"
 import {LuEyeClosed} from "react-icons/lu"
+import { LuEye } from "react-icons/lu";
+
 import server from "../../server"
 const Login = ()=>{
     const [email,setEmail]=useState('')
